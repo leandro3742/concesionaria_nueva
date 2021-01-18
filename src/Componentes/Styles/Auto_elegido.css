@@ -1,0 +1,50 @@
+.imagen-grande.cover, .imagen-chica{
+    object-fit: cover;
+}
+.container-grande{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5px 100% 5px;
+}
+.imagen-grande{
+    border: outset;
+    border-radius: 10px;
+    width: 95%;
+    margin-top: 25px;
+    z-index: 0;
+}
+.boton-cambio-img{
+    color: black;
+    opacity: 0%;
+    outline: none;
+    margin-top: 25px;
+    width: 70px;
+    z-index: 1;
+}
+.boton-cambio-img.atras{
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+}
+
+.boton-cambio-img.adelante{
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -65px;
+}
+
+.container-imagenes{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.imagen-chica{
+    border: outset;
+    border-radius: 10px;
+    width: 75px;
+}
+a{ /* Aca saco las caracterizticas que trae la etiqueta Link por defecto*/
+    color: white;
+    text-decoration: none;
+}

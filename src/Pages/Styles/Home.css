@@ -1,0 +1,45 @@
+#titulo{
+    margin-top: 25px;
+    width: 90%;
+    margin-left: 1%;
+    padding: 4%;
+    border-radius: 25px 10px 30px 20px;
+    background-color: #337989;
+    display: flex;
+    justify-content: center;
+}
+.submenu{
+    font-family: 'PT Serif', serif;
+
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: 15%;
+    width: 65%;
+    padding: 5%;
+    border-radius: 10px 20px 5px 25px;
+    display: flex;
+    justify-content: center;
+}
+.submenu.uno{
+    background-color: #29849F;
+}
+.submenu.dos{
+    background-color: #4693AA;
+}
+.submenu.tres{
+    background-color: #62B5CE;
+}
+.texto{
+    color: white;
+    font-size: 18px;
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    margin-top: 50px;
+}
+.mapa-titulo{
+    font-family: 'PT Serif', serif;
+}

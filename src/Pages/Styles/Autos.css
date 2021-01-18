@@ -1,0 +1,65 @@
+.auto{
+    display: grid;
+    
+}
+.boton-atras{
+    text-align: center;
+    width: 75px;
+    outline: none;
+    background-color: #29849F;
+    margin-top: 25px;
+    border-radius: 10px 25px 25px 10px;
+    font-family: 'PT Serif', serif;
+
+}
+.imagen.cover{
+    object-fit: cover;
+}
+.imagen{
+    border: outset;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.precio{
+    font-size: 21px;
+    font-family: 'PT Serif', serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.especificaciones{
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: space-between;
+}
+.contenedor{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+.titulo-autos{
+    font-family: 'PT Serif', serif;
+    color: #707070;
+}
+.especificacion-autos{
+    font-family: 'PT Serif', serif;
+}
+.contenedor-boton{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.boton{
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    color: white;
+    width: 175px;
+    height: 35px;
+    background-color: #29849F;
+    border-radius: 10px 20px 5px 25px;
+}
