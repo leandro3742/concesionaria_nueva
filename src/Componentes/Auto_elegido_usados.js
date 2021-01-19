@@ -1,6 +1,6 @@
 import React from 'react';
 import './Styles/Auto_elegido.css';
-
+import { Link } from 'react-router-dom';
 let imagen_grande;
     
 function img_chica(props){
@@ -134,6 +134,9 @@ export default class Auto_elegido_usados extends React.Component {
                         <span className="especificacion-autos">{this.props.datos.estado}</span>
                     </div>
                 </div>   
+                <div className="container-boton">
+                    <Link to="Contactanos"><button className="boton">Contactanos</button></Link>
+                </div>
             </div>
         )
     }

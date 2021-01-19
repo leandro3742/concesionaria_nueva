@@ -1,5 +1,6 @@
 import React from 'react';
 import './Styles/Auto_elegido.css';
+import { Link } from 'react-router-dom';
 
 let imagen_grande;
 
@@ -141,7 +142,10 @@ export default class Auto_elegido_nuevos extends React.Component {
                         <span className="titulo-autos">Estado</span>
                         <span className="especificacion-autos">{this.props.datos.estado}</span>
                     </div>
-                </div>   
+                </div>  
+                <div className="container-boton">
+                    <Link to="Contactanos"><button className="boton">Contactanos</button></Link>
+                </div> 
             </div>
         )
     }

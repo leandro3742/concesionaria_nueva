@@ -7,8 +7,7 @@ import Nosotros from './Pages/Nosotros';
 import Autos0Km from './Pages/Autos0Km.js';
 import AutosUsados from './Pages/AutosUsados';
 import Contactanos from './Pages/Contactanos';
-// import Auto_elegido from './Componentes/Auto_elegido';
-// import Autos from './Pages/Autos';
+import Tasador from './Pages/Tasador';
 function App() {
   return (
     <div className="App">
@@ -20,7 +19,7 @@ function App() {
             <Route exact path="/Autos_0Km" component={Autos0Km} />
             <Route exact path="/Autos_Usados" component={AutosUsados} />
             <Route exact path="/Contactanos" component={Contactanos} />
-            {/* <Route exact path="/Autos" component={Auto_elegido} /> */}
+            <Route exact path="/Tasador" component={Tasador} />            
           </Switch>
         </ Layout>
       </BrowserRouter>

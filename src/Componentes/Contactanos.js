@@ -28,19 +28,24 @@ export default function ContactUs() {
   }
 
   return (
-    <form className="formulario" onSubmit={sendEmail}>
-      <input type="hidden" name="contact_number" />
-      
-      <label className="etiquetas primera">Nombre</label>
-      <input className="cuadros" type="text" name="nombre_cliente" />
-      
-      <label className="etiquetas">Numero de contacto</label>
-      <input className="cuadros" type="number" name="numero_cliente" />
-      
-      <label className="etiquetas">Descripción</label>
-      <textarea className="descripcion" type="text" name="mensaje"  />
-      
-      <input className="submit" type="submit" value="Enviar consulta" />
-    </form>
+    <div>
+      <div className="titulo-contactanos">
+        <span> Envianos tu consulta </span>
+      </div>
+      <form className="formulario" onSubmit={sendEmail}>
+        <input type="hidden" name="contact_number" />
+        
+        <label className="etiquetas primera">Nombre</label>
+        <input className="cuadros" type="text" name="nombre_cliente" />
+        
+        <label className="etiquetas">Numero de contacto</label>
+        <input className="cuadros" type="number" name="numero_cliente" />
+        
+        <label className="etiquetas">Descripción</label>
+        <textarea className="descripcion" type="text" name="mensaje"  />
+        
+        <input className="submit" type="submit" value="Enviar consulta" />
+      </form>
+    </div>
   );
 }

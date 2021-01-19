@@ -44,6 +44,11 @@
     border-radius: 10px;
     width: 75px;
 }
+.container-boton{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
 a{ /* Aca saco las caracterizticas que trae la etiqueta Link por defecto*/
     color: white;
     text-decoration: none;
