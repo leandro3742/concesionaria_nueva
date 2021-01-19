@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.ec5769ef.chunk.css",
-    "main.js": "/static/js/main.6fc410fb.chunk.js",
-    "main.js.map": "/static/js/main.6fc410fb.chunk.js.map",
+    "main.css": "/static/css/main.97cc71a1.chunk.css",
+    "main.js": "/static/js/main.0816e25b.chunk.js",
+    "main.js.map": "/static/js/main.0816e25b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.dd5e0c39.js",
     "runtime-main.js.map": "/static/js/runtime-main.dd5e0c39.js.map",
     "static/js/2.62aec720.chunk.js": "/static/js/2.62aec720.chunk.js",
@@ -10,13 +10,14 @@
     "static/js/3.91ea462a.chunk.js": "/static/js/3.91ea462a.chunk.js",
     "static/js/3.91ea462a.chunk.js.map": "/static/js/3.91ea462a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ec5769ef.chunk.css.map": "/static/css/main.ec5769ef.chunk.css.map",
+    "static/css/main.97cc71a1.chunk.css.map": "/static/css/main.97cc71a1.chunk.css.map",
     "static/js/2.62aec720.chunk.js.LICENSE.txt": "/static/js/2.62aec720.chunk.js.LICENSE.txt",
     "static/media/argo1.0ef7b22f.JPG": "/static/media/argo1.0ef7b22f.JPG",
     "static/media/argo2.ab9e06ae.JPG": "/static/media/argo2.ab9e06ae.JPG",
     "static/media/argo3.dfc206d7.JPG": "/static/media/argo3.dfc206d7.JPG",
     "static/media/facebook.22d5e33c.svg": "/static/media/facebook.22d5e33c.svg",
     "static/media/logo.f3a37ae2.png": "/static/media/logo.f3a37ae2.png",
+    "static/media/mail.44215d3a.svg": "/static/media/mail.44215d3a.svg",
     "static/media/palio1.74499445.JPG": "/static/media/palio1.74499445.JPG",
     "static/media/palio2.a0092015.JPG": "/static/media/palio2.a0092015.JPG",
     "static/media/palio3.64019043.JPG": "/static/media/palio3.64019043.JPG",
@@ -34,12 +35,13 @@
     "static/media/uno3.08a8fcf8.JPG": "/static/media/uno3.08a8fcf8.JPG",
     "static/media/uno3.d57f1db3.JPG": "/static/media/uno3.d57f1db3.JPG",
     "static/media/uno4.7cf2f3e1.JPG": "/static/media/uno4.7cf2f3e1.JPG",
-    "static/media/uno4.c9ef496f.JPG": "/static/media/uno4.c9ef496f.JPG"
+    "static/media/uno4.c9ef496f.JPG": "/static/media/uno4.c9ef496f.JPG",
+    "static/media/whatsapp.10ad08fa.svg": "/static/media/whatsapp.10ad08fa.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.dd5e0c39.js",
     "static/js/2.62aec720.chunk.js",
-    "static/css/main.ec5769ef.chunk.css",
-    "static/js/main.6fc410fb.chunk.js"
+    "static/css/main.97cc71a1.chunk.css",
+    "static/js/main.0816e25b.chunk.js"
   ]
 }

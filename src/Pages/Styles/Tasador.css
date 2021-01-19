@@ -1,3 +1,22 @@
+.Tasador{
+    margin-top: 25px;
+    display: grid;
+    justify-content: center;
+}
+.titulo-tasador{
+    text-decoration: underline blue;
+    font-size: 21px;
+    font-family: 'PT Serif', serif;
+}
 .link-wpp{
-    color:red;
+    font-family: 'PT Serif', serif;
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-top: 25px;
+}
+.mail{
+    font-family: 'PT Serif', serif;
+    display: flex;
+    align-items: center;
 }
