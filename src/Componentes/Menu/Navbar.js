@@ -5,8 +5,8 @@ import Burger from './Burger';
 import logo from '../../Imagenes/logo.png';
 
 const Nav = styled.nav`
-margin: 0; 
-width: 100%;
+  margin: 0; 
+  width: 100%;
   height: 105px;
   border-bottom: 2px solid #f1f1f1;
   display: flex;
@@ -16,6 +16,13 @@ width: 100%;
     margin-top: 0;
     width: 150px;
     height: 112.5px;
+  }
+  @media only screen and (min-width: 781px){
+    height: 125px;
+    .logo{
+      width: 200px;
+      height: 150px;
+    }
   }
 `
 

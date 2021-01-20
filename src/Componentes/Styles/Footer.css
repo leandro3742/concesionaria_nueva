@@ -52,3 +52,46 @@
 .contacto-complemento{
     color: #CFC9C9;
 }
+
+@media only screen and (min-width: 781px){
+    .titulo-redes{
+        font-size: 21px;
+    } 
+    .logo-fb, .logo-tw, .logo-insta{
+        width: 65px;
+        transition-duration: 1s;
+    }
+    .logo-fb:hover, .logo-tw:hover, .logo-insta:hover{   
+        width: 70px;
+    } 
+    .facebook, .twitter, .instagram{
+        font-size: 15px;
+    }
+    
+    .titulo-contacto{
+        text-decoration: underline;
+        display: flex;
+        justify-content: center;
+        font-size: 21px;
+    }
+    .todos-los-contactos{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-left: -150px;
+    }
+    .mail{
+        margin-left: 150px;
+    }
+    .numero{
+        margin-left: -150px;
+    }
+    .telefono{
+        margin-right: 15px;
+    }
+    .mail, .numero, .telefono{
+        font-size: 18px;
+        margin-top: 15px;
+        /* margin-left: 50px; */
+    }
+} 

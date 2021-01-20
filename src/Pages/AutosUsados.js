@@ -38,14 +38,26 @@ export const autos = [UNO, PALIO];
 let auxiliar; //Aca guardo Lista de autos tal cual empieza asi cuando quiero regresar a la pagina anterior pueda hacerlo
 let Lista_de_autos = //Contiene la lista completa de todos los autos usados
             <div className="Autos0Km">
-                <Autos_solos auto={autos[0]} />
-                <div className="contenedor-boton" onClick={()=> ir(0) }>
-                    <Link to="Autos_usados"><button className="boton">Ver más</button></Link>
+
+                <div className="">
+                    <Autos_solos auto={autos[0]} />
+                    <div className="contenedor-boton" onClick={()=> ir(0) }>
+                        <Link to="Autos_usados"><button className="boton">Ver más</button></Link>
+                    </div>
+                </div>
+                
+                <div className="">
+                    <Autos_solos auto={autos[1]} />
+                    <div className="contenedor-boton" onClick={()=> ir(1) }>
+                        <Link to="Autos_usados"><button className="boton">Ver más</button></Link>
+                    </div>
                 </div>
 
-                <Autos_solos auto={autos[1]} />
-                <div className="contenedor-boton" onClick={()=> ir(1) }>
-                    <Link to="Autos_usados"><button className="boton">Ver más</button></Link>
+                <div className="">
+                    <Autos_solos auto={autos[1]} />
+                    <div className="contenedor-boton" onClick={()=> ir(1) }>
+                        <Link to="Autos_usados"><button className="boton">Ver más</button></Link>
+                    </div>
                 </div>
 
             </div>

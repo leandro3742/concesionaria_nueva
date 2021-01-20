@@ -12,15 +12,15 @@ export default class Footer extends React.Component {
             </div>
             <div className="redes">
                 <div className="facebook">
-                    <img src={facebook} alt=""/>
+                    <img className="logo-fb" src={facebook} alt=""/>
                     <span className="nombre-facebook">LM designer</span>
                 </div>
                 <div className="twitter">
-                    <img src={twitter} alt=""/>
+                    <img className="logo-tw" src={twitter} alt=""/>
                     <span className="nombre-twitter">LM designer</span>
                 </div>
                 <div className="instagram">
-                    <img src={instagram} alt=""/>
+                    <img className="logo-insta" src={instagram} alt=""/>
                     <span className="nombre-instagram">Lm.designer</span>
                 </div>
             </div>
@@ -29,14 +29,16 @@ export default class Footer extends React.Component {
                 <div className="cotacto">
                     <span className="titulo-contacto">Contáctanos</span>
                 </div>
-                <div className="mail">
-                    <span className="contacto-titulo">Mail:</span> <span className="contacto-complemento"> leandro.marrero@outlook.com</span>    
-                </div>
-                <div className="numero">
-                    <span className="contacto-titulo">WhatsApp:</span> <span className="contacto-complemento"> 098361013</span>    
-                </div>
-                <div className="telefono">
-                    <span className="contacto-titulo">Tel:</span> <span className="contacto-complemento"> 4330 3890</span>    
+                <div className="todos-los-contactos">
+                    <div className="mail">
+                        <span className="contacto-titulo">Mail:</span> <span className="contacto-complemento"> leandro.marrero@outlook.com</span>    
+                    </div>
+                    <div className="numero">
+                        <span className="contacto-titulo">WhatsApp:</span> <span className="contacto-complemento"> 098361013</span>    
+                    </div>
+                    <div className="telefono">
+                        <span className="contacto-titulo">Tel:</span> <span className="contacto-complemento"> 4330 3890</span>    
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,3 +46,4 @@ export default class Footer extends React.Component {
         );
     }
 }
+

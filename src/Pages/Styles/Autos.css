@@ -55,6 +55,7 @@
     justify-content: center;
 }
 .boton{
+    outline: none;
     font-family: 'PT Serif', serif;
     font-size: 16px;
     color: white;
@@ -62,4 +63,56 @@
     height: 35px;
     background-color: #29849F;
     border-radius: 10px 20px 5px 25px;
+    transition-duration: 0.5s;
 }
+
+.boton:active{
+    border: inset;
+}
+
+@media only screen and (max-width: 780px) and (min-width: 426px){
+    .precio{
+        font-size: 25px;
+    }
+    .especificaciones{
+        font-size: 21px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .boton{
+        width: 230px;
+        height: 46px;
+        font-size: 21px;
+    }
+} 
+
+@media only screen and (min-width: 781px){
+    .Autos0Km{
+        margin-left: 5%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .imagen{
+        width: 350px;
+        margin-left: 0px;
+    }
+    .especificaciones{
+        justify-content: center;
+        width: 75%;
+        margin-left: 7.5%;
+    }
+    .especificacion-autos, .titulo-autos{
+        margin-left: 25px;
+    }
+    .auto{
+        justify-content: center;
+    }
+    .boton:hover{
+        border-radius: 5px 15px 0px 20px;
+    }
+    
+} 

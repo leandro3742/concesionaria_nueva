@@ -8,8 +8,13 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   .link {
+    margin-top: 25px;
+    color: blue;
     padding: 18px 10px;
     text-decoration: none;
+  }
+  .link:hover{
+    text-decoration: underline;
   }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
