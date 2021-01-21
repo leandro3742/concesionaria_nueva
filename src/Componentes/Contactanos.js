@@ -35,14 +35,20 @@ export default function ContactUs() {
       <form className="formulario" onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />
         
+        <div className="container-form nombre">
         <label className="etiquetas primera">Nombre</label>
         <input className="cuadros" type="text" name="nombre_cliente" />
+        </div>
         
-        <label className="etiquetas">Numero de contacto</label>
-        <input className="cuadros" type="number" name="numero_cliente" />
+        <div className="container-form numero">
+          <label className="etiquetas">Numero de contacto</label>
+          <input className="cuadros" type="number" name="numero_cliente" />
+        </div>
         
-        <label className="etiquetas">Descripción</label>
-        <textarea className="descripcion" type="text" name="mensaje"  />
+        <div className="container-form descripcion">
+          <label className="etiquetas">Descripción</label>
+          <textarea className="descripcion" type="text" name="mensaje"  />
+        </div>
         
         <input className="submit" type="submit" value="Enviar consulta" />
       </form>

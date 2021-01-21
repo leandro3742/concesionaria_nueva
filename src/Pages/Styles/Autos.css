@@ -100,10 +100,14 @@
         width: 350px;
         margin-left: 0px;
     }
+    
+    .precio{
+        font-size: 24px;
+    }
     .especificaciones{
+        margin: 0;
+        font-size: 21px;
         justify-content: center;
-        width: 75%;
-        margin-left: 7.5%;
     }
     .especificacion-autos, .titulo-autos{
         margin-left: 25px;

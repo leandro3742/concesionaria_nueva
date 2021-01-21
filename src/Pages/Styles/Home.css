@@ -44,17 +44,27 @@
     font-family: 'PT Serif', serif;
 }
 
-@media only screen and (max-width: 780px) and (min-width: 426px){
+@media only screen and (min-width: 426px){
     #titulo{
         margin-left: 11%;
         width: 75%;
+        padding: 0;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .texto{
         font-size: 25px;
     }
     .submenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: 22%;
         width: 50%;
+        padding: 0;
+        height: 50px;
     }
 } 
 
@@ -62,16 +72,24 @@
     #titulo{
         margin-left: 11%;
         width: 75%;
+        padding: 0;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .texto{
-        margin-left: 0px;
-        color: black;
         font-size: 25px;
     }
     .submenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: 22%;
         width: 50%;
-        transition-duration: .2s;
+        padding: 0;
+        height: 50px;
+        transition-duration: .5s;
     }
     .submenu:hover{
         border: outset;

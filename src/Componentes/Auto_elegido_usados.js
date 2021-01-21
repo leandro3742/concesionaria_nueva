@@ -1,6 +1,10 @@
 import React from 'react';
 import './Styles/Auto_elegido.css';
 import { Link } from 'react-router-dom';
+
+import flecha_adelante from '../Imagenes/fleha-sig(1).png';
+import flecha_atras from '../Imagenes/fleha-atras(1).png';
+
 let imagen_grande;
     
 function img_chica(props){
@@ -113,9 +117,9 @@ export default class Auto_elegido_usados extends React.Component {
         return(
             <div>
                 <div className="container-grande">
-                    <button className="boton-cambio-img atras" onClick={this.anterior} ></button>
+                    <button className="boton-cambio-img atras" onClick={this.anterior} > <img className="img-flecha" src={flecha_atras} /> </button>
                     <img className="imagen-grande" src={this.props.datos.fotos[this.state.i]} alt=""/> 
-                    <button className="boton-cambio-img adelante" onClick={this.siguiente} ></button>
+                    <button className="boton-cambio-img adelante" onClick={this.anterior} > <img className="img-flecha" src={flecha_adelante} /> </button>
                 </div>
                 {img_chica(this.props, this.state.i)}      
                 

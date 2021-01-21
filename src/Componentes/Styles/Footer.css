@@ -55,6 +55,7 @@
 
 @media only screen and (min-width: 781px){
     .titulo-redes{
+        text-decoration: underline white;
         font-size: 21px;
     } 
     .logo-fb, .logo-tw, .logo-insta{
@@ -71,7 +72,7 @@
     .titulo-contacto{
         text-decoration: underline;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         font-size: 21px;
     }
     .todos-los-contactos{
@@ -81,13 +82,14 @@
         margin-left: -150px;
     }
     .mail{
-        margin-left: 150px;
+        margin-left: 250px;
     }
     .numero{
-        margin-left: -150px;
+        margin-left: -250px;
+        margin-right: -150px;
     }
     .telefono{
-        margin-right: 15px;
+        margin-right: 150px;
     }
     .mail, .numero, .telefono{
         font-size: 18px;
