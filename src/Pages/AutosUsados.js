@@ -82,7 +82,7 @@ export default class AutosUsados extends React.Component {
     
     render(){
         return(
-            <div>
+            <div> 
                 {Lista_de_autos}
             </div>
         );

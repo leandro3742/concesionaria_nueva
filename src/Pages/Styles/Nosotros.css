@@ -1,0 +1,10 @@
+.Nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.texto-nosotros{
+    margin-top: 15px;
+}
