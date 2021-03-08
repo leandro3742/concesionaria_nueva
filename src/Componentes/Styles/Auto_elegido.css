@@ -44,6 +44,16 @@
     border-radius: 10px;
     width: 75px;
 }
+
+.especificaciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+}
+.titulo-autos{
+    display: flex;
+    align-items: center;
+}
 .container-boton{
     margin-top: 25px;
     display: flex;
@@ -90,6 +100,7 @@ a{ /* Aca saco las caracterizticas que trae la etiqueta Link por defecto*/
         grid-gap: 50px;
         grid-template-columns: repeat(5, 100px);
     }
+
 }
 
 @media only screen and (min-width: 781px){

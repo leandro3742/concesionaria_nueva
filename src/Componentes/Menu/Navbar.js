@@ -18,7 +18,7 @@ const Nav = styled.nav`
     height: 112.5px;
   }
   @media only screen and (min-width: 781px){
-    height: 125px;
+    height: 135px;
     .logo{
       width: 200px;
       height: 150px;
@@ -28,12 +28,10 @@ const Nav = styled.nav`
 
 const Navbar = () => {
   return (
-    // <div className="Navbar">
     <Nav>  
       <Link to="/"><img src={logo} alt="" className="logo"/></Link>
       <Burger />
     </Nav>
-    // </div>
   )
 }
 

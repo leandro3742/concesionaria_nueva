@@ -1,6 +1,8 @@
 .Footer{
     font-family: 'PT Serif', serif;
 
+    /* border-color: blueviolet; */
+    border-top: outset #0C3643;
     margin-top: 50px;
     width: 100%;
     height: 300px;

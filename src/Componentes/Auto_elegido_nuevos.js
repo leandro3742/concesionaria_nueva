@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Styles/Auto_elegido.css';
 import { Link } from 'react-router-dom';
 
@@ -13,62 +13,94 @@ function cambiar(props, i){
 
 
 
-export default class Auto_elegido_nuevos extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          i: 0,
-          fotos : props.datos.fotos
-          
-        };
-    }
-    anterior = () =>{
-        if(this.state.i <=  0)
-            this.setState({ i : this.props.datos.fotos.length-1});
+const Auto_elegido = (props) =>{
+    const datos = props.value;
+    const fotos = datos.fotos;
+
+    const[foto, setFoto] = useState(fotos[0]);
+    const[i, setI] = useState(0);    
+    
+    function siguiente(iterador){
+        if(iterador < fotos.length-1){
+            setI(i + 1);
+            setFoto(fotos[i]);
+        }
         else
-            this.setState({ i : this.state.i-1 });
+            setI(0);
+            setFoto(fotos[i]);
     }
 
-    siguiente = () =>{
-        if(this.state.i+1 < this.props.datos.fotos.length)
-            this.setState({ i : this.state.i+1 });
+    function anterior(iterador){
+        if(iterador === 0){
+            setI(fotos.length-1);
+            setFoto(fotos[i]);
+        }
         else
-            this.setState({ i : 0 });
+            setI(i-1);
+            setFoto(fotos[i]);
     }
-    render(){
-        return(
-            <div>
-                <div className="container-grande">
-                    <button className="boton-cambio-img atras" onClick={this.anterior} > <img className="img-flecha" src={flecha_atras} /> </button>
-                    <img className="imagen-grande" src={this.props.datos.fotos[this.state.i]} alt=""/> 
-                    <button className="boton-cambio-img adelante" onClick={this.siguiente} > <img className="img-flecha" src={flecha_adelante} /> </button>
+
+    function cambiar_img(foto_elegida){
+        setFoto(foto_elegida);
+    }
+
+    return(
+    <div>
+        <div className="container-grande">
+            <button className="boton-cambio-img atras" onClick={()=> anterior(i)} > <img className="img-flecha" src={flecha_atras} /> </button>
+            <img className="imagen-grande" src={foto} alt=""/> 
+            <button className="boton-cambio-img adelante" onClick={()=> siguiente(i)} > <img className="img-flecha" src={flecha_adelante} /> </button>
+        </div>
+
+        <div className="container-imagenes">
+        {fotos.map(fotos =>
+            <img onClick={()=>cambiar_img(fotos)}className="imagen-chica" src={fotos} alt=""/>       
+        )}
+        </div>  
+        <span className="precio">{datos.precio}</span>
+        <div className="especificaciones">
+                <div className="contenedor">
+                    <span className="titulo-autos">Modelo</span>
+                    <span className="especificacion-autos">{datos.modelo}</span>
                 </div>
-
-                <div className="container-imagenes">
-                {this.state.fotos.map(fotos =>
-                        <img className="imagen-chica" src={fotos} alt=""/>
-                )}
-                </div>  
-
-                <span className="precio">{this.props.datos.precio}</span>
-                <div className="especificaciones">
-                    <div className="contenedor">
-                        <span className="titulo-autos">Modelo</span>
-                        <span className="especificacion-autos">{this.props.datos.modelo}</span>
-                    </div>
-                    <div className="contenedor">
-                        <span className="titulo-autos">Año</span>
-                        <span className="especificacion-autos">{this.props.datos.ano}</span>
-                    </div>
-                    <div className="contenedor">
-                        <span className="titulo-autos">Estado</span>
-                        <span className="especificacion-autos">{this.props.datos.estado}</span>
-                    </div>
-                </div>  
-                <div className="container-boton">
-                    <Link to="Contactanos"><button className="boton">Contactanos</button></Link>
-                </div> 
-            </div>
-        )
-    }
+                <div className="contenedor">
+                    <span className="titulo-autos">Año</span>
+                    <span className="especificacion-autos">{datos.ano}</span>
+                </div>
+                <div className="contenedor">
+                    <span className="titulo-autos">Estado</span>
+                    <span className="especificacion-autos">{datos.estado}</span>
+                </div>
+                
+                <div className="contenedor">
+                    <span className="titulo-autos">Tipo de combustible</span>
+                    <span className="especificacion-autos">{datos.combustible}</span>
+                </div>
+                <div className="contenedor">
+                    <span className="titulo-autos">Puertas</span>
+                    <span className="especificacion-autos">{datos.puertas}</span>
+                </div>
+                <div className="contenedor">
+                    <span className="titulo-autos">Transmision</span>
+                    <span className="especificacion-autos">{datos.transmision}</span>
+                </div>
+                <div className="contenedor">
+                    <span className="titulo-autos">Motor</span>
+                    <span className="especificacion-autos">{datos.motor}</span>
+                </div>
+                <div className="contenedor">
+                    <span className="titulo-autos">Direccion</span>
+                    <span className="especificacion-autos">{datos.direccion}</span>
+                </div>
+                <div className="contenedor">
+                    <span className="titulo-autos">Airbag</span>
+                    <span className="especificacion-autos">{datos.airbag}</span>
+                </div>
+        </div>
+        <div className="container-boton">
+            <Link to="Contactanos"><button className="boton">Contactanos</button></Link>
+        </div> 
+    </div>
+    )
 }
+export default Auto_elegido;

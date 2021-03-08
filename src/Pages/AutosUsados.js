@@ -17,19 +17,26 @@ import palio3 from '../Imagenes/Autos/usados/palio/palio3.JPG';
 import palio4 from '../Imagenes/Autos/usados/palio/palio4.JPG';
 
 class AUTO{
-    constructor(modelo, ano, estado, precio, fotos){
+    constructor(modelo, ano, estado, precio, fotos, puertas, combustible, transmision, motor, direccion, airbag){
         this.precio = precio;
         this.modelo = modelo;
         this.ano = ano;
         this.estado = estado;
         this.fotos = fotos;
+        this.puertas = puertas;
+        this.combustible = combustible;
+        this.transmision = transmision;
+        this.motor = motor;
+        this.direccion = direccion;
+        this.airbag = airbag;
     }   
 }
+
 export const fotos_uno = [uno1, uno2, uno3, uno4];
-const UNO = new AUTO('Fiat Uno', '1985', '1500 Km', 'U$S 5.850', fotos_uno );
+const UNO = new AUTO('Fiat Uno', '1985', '1500 Km', 'U$S 5.850', fotos_uno, '2', 'Nafta', 'Manual', '1.0', 'Mecanica', 'No');
 
 export const fotos_palio = [palio1, palio2, palio3, palio4];
-const PALIO = new AUTO('Fiat Palio', '2010', '305960 Km', 'U$S 6.750', fotos_palio);
+const PALIO = new AUTO('Fiat Palio', '2010', '305960 Km', 'U$S 6.750', fotos_palio, '5', 'Nafta', 'Manual', '1.6', 'Asistida', 'No');
 
 export const autos = [UNO, PALIO];
 
@@ -73,7 +80,7 @@ function ir(info){
 
     <div>
         <Link to="Autos_usados"onClick={()=>cambiar()}><div className="boton-atras">Atras</div></Link>
-        <Auto_elegido_usados datos={autos[info]}/>
+        <Auto_elegido_usados value={autos[info]}/>
     </div>
     
 }
