@@ -5,14 +5,6 @@ import { Link } from 'react-router-dom';
 import flecha_adelante from '../Imagenes/fleha-sig(1).png';
 import flecha_atras from '../Imagenes/fleha-atras(1).png';
 
-let imagen_grande;
-
-function cambiar(props, i){
-    imagen_grande = <img className="imagen-grande" src={props.datos.fotos[i]}/> 
-}
-
-
-
 const Auto_elegido = (props) =>{
     const datos = props.value;
     const fotos = datos.fotos;
@@ -47,9 +39,9 @@ const Auto_elegido = (props) =>{
     return(
     <div>
         <div className="container-grande">
-            <button className="boton-cambio-img atras" onClick={()=> anterior(i)} > <img className="img-flecha" src={flecha_atras} /> </button>
+            <button className="boton-cambio-img atras" onClick={()=> anterior(i)} > <img className="img-flecha" src={flecha_atras} alt=""/> </button>
             <img className="imagen-grande" src={foto} alt=""/> 
-            <button className="boton-cambio-img adelante" onClick={()=> siguiente(i)} > <img className="img-flecha" src={flecha_adelante} /> </button>
+            <button className="boton-cambio-img adelante" onClick={()=> siguiente(i)} > <img className="img-flecha" src={flecha_adelante} alt="" /> </button>
         </div>
 
         <div className="container-imagenes">

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Styles/Autos.css';
 import Autos_solos from '../Componentes/Autos';
-import Auto_elegido_nuevos from '../Componentes/Auto_elegido_nuevos';
+import Auto_elegido from '../Componentes/Auto_elegido';
 
 import argo1 from '../Imagenes/Autos/argo/argo1.JPG';
 import argo2 from '../Imagenes/Autos/argo/argo2.JPG';
@@ -50,77 +50,35 @@ const autos = [ARGO, TORO, UNO];
 
 /***************** FIN DE INFO ******************************/
 
-let auxiliar; //Aca guardo Lista de autos tal cual empieza asi cuando quiero regresar a la pagina anterior pueda hacerlo
-let Lista_de_autos = //Contiene la lista completa de todos los autos usados
+const AutosUsados = () => {    
+    const [mostrar_lista, setMostrar_lista] = useState(true);
+    const [auto_elegido, setAuto_elegido] = useState(<div></div>);
+
+    function cambiar_lista(a){
+        setMostrar_lista(!mostrar_lista);
+        setAuto_elegido(a);
+    }
+    if (mostrar_lista === true){
+        return(
             <div className="Autos0Km">
-                
-                <div className="">
-                    <Autos_solos auto={autos[0]} />
-                    <div className="contenedor-boton" onClick={()=> ir(0) }>
-                        <Link to="Autos_0Km"><button className="boton">Ver más</button></Link>
-                    </div>
-                </div>
-
-                <div className="">
-                    <Autos_solos auto={autos[1]}/>
-                    <div className="contenedor-boton" onClick={()=> ir(1) }>
-                        <Link to="Autos_0Km"><button className="boton">Ver más</button></Link>
-                    </div>
-                </div>
-                
-                <div className="">
-                    <Autos_solos auto={autos[2]}/>
-                    <div className="contenedor-boton" onClick={()=> ir(2) }>
-                        <Link to="Autos_0Km"><button className="boton">Ver más</button></Link>
-                    </div>
-                </div>
-
-                <div className="">
-                    <Autos_solos auto={autos[0]} />
-                    <div className="contenedor-boton" onClick={()=> ir(0) }>
-                        <Link to="Autos_0Km"><button className="boton">Ver más</button></Link>
-                    </div>
-                </div>
-
-                <div className="">
-                    <Autos_solos auto={autos[1]}/>
-                    <div className="contenedor-boton" onClick={()=> ir(1) }>
-                        <Link to="Autos_0Km"><button className="boton">Ver más</button></Link>
-                    </div>
-                </div>
-                
-                <div className="">
-                    <Autos_solos auto={autos[2]}/>
-                    <div className="contenedor-boton" onClick={()=> ir(2) }>
-                        <Link to="Autos_0Km"><button className="boton">Ver más</button></Link>
-                    </div>
-                </div>
-
+                <Autos_solos auto={autos[0]} />
+                <div className="contenedor-boton" onClick={()=> cambiar_lista(autos[0])}> <button className="boton">Ver más</button> </div>
+    
+                <Autos_solos auto={autos[1]}/>
+                <div className="contenedor-boton" onClick={()=> cambiar_lista(autos[1]) }> <button className="boton">Ver más</button> </div>
+            
+                <Autos_solos auto={autos[2]}/>
+                <div className="contenedor-boton" onClick={()=> cambiar_lista(autos[2]) }> <button className="boton">Ver más</button> </div>
             </div>
-
-
-function cambiar(){ //Sirve para volver a mostraar toda la lista de autos 
-    Lista_de_autos = auxiliar;
-}
-
-function ir(info){
-    auxiliar = Lista_de_autos;  //Respaldo la lista de autos para poder volver 
-    Lista_de_autos = 
-
-    <div>
-        <Link to="Autos_0Km"onClick={()=>cambiar()}><div className="boton-atras">Atras</div></Link>
-        <Auto_elegido_nuevos value={autos[info]}/>
-    </div>
-    
-}
-
-export default class AutosUsados extends React.Component {
-    
-    render(){
+        )
+    }
+    else{
         return(
             <div>
-                {Lista_de_autos}
+                <Link to="Autos_0Km"onClick={()=>setMostrar_lista(true)}><div className="boton-atras">Atras</div></Link>
+                <Auto_elegido value={auto_elegido}/>
             </div>
-        );
+        )
     }
 }
+export default AutosUsados;

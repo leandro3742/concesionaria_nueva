@@ -8,12 +8,33 @@
 .formulario{
     border-radius: 5px;
     margin-top: 10px;
-    border: 2px solid black;
+        /* border: 2px solid black; */
     font-family: 'PT Serif', serif;
     width: 90%;
     margin-left: 5%;
     display: grid;
     justify-content: center;
+}
+.pasos_a_seguir{
+    margin-left: -20px;
+}
+
+.elegir_si_vender_o_comprar{
+    display: flex;
+}
+.elegido{
+    color: green;
+}
+.no_elegido{
+    color: grey;
+}
+.no_elegido, .elegido{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.container-form{
+    display: grid;
 }
 .etiquetas{
     text-align: center;
@@ -21,16 +42,20 @@
 .etiquetas.primera{
     margin-top: 10px;
 }
-.cuadros{
+.input{
+    text-align: center;
     outline: none;
+    background-color: transparent;
     margin-top: 5px;
     margin-bottom: 15px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 .descripcion{
     height: 100px;
     outline: none;
     border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: transparent;
 }
 
 .submit{

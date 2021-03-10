@@ -2,9 +2,8 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import './Styles/Contactanos.css';
 import swal from 'sweetalert';
+import { useState } from 'react/cjs/react.development';
 
-// emailjs.send(serviceID, templateID, e.target, userID);
-let vehiculo = "Ford";
 export default function ContactUs() {
 
   function sendEmail(e) {
@@ -27,31 +26,55 @@ export default function ContactUs() {
       });
   }
 
+  // let comprar = "no_elegido";
+  // let vender = "no_elegido";
+  const [comprar, setComprar] = useState("no_elegido");
+  const [vender, setVender] = useState("no_elegido");
+  
+  function elegir(elegido){
+    if (elegido === "comprar"){
+      setComprar("elegido");
+      setVender("no_elegido");
+    }
+    else if(elegido === "vender"){
+      setComprar("no_elegido");
+      setVender("elegido");
+    }
+
+  }
   return (
-    <div>
-      <div className="titulo-contactanos">
-        <span> Envianos tu consulta </span>
-      </div>
+    // <div>
       <form className="formulario" onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />
+        <h3 className="pasos_a_seguir">1. Ingrese sus datos</h3>
+        <div className="container-form nombre">
+          <label className="etiquetas primera">Nombre</label>
+          <input className="input" type="text" name="nombre_cliente" />
+        </div>
         
         <div className="container-form nombre">
-        <label className="etiquetas primera">Nombre</label>
-        <input className="cuadros" type="text" name="nombre_cliente" />
+          <label className="etiquetas primera">Apellido</label>
+          <input className="input" type="text" name="nombre_cliente" />
         </div>
-        
+
         <div className="container-form numero">
           <label className="etiquetas">Numero de contacto</label>
-          <input className="cuadros" type="number" name="numero_cliente" />
+          <input className="input" type="number" name="numero_cliente" />
         </div>
         
+        <h3 className="pasos_a_seguir">2. Elija una de las opciones</h3>
+        <div className="elegir_si_vender_o_comprar">
+          <h4 className={comprar} onClick={()=> elegir("comprar")}>Quiero comprar</h4>
+          <h4 className={vender} onClick={()=> elegir("vender")}>Quiero vender</h4>
+        </div>
+        
+        <h3 className="pasos_a_seguir">3. Si desea ingrese una pregunta </h3>
         <div className="container-form descripcion">
-          <label className="etiquetas">Descripción</label>
           <textarea className="descripcion" type="text" name="mensaje"  />
         </div>
         
         <input className="submit" type="submit" value="Enviar consulta" />
       </form>
-    </div>
+    // </div>
   );
 }

@@ -21,9 +21,6 @@ function Autos_solos(props){
                     <span className="especificacion-autos">{props.auto.estado}</span>
                 </div>
             </div>
-            {/* <div className="contenedor-boton">
-                <button className="boton">Ver mas</button>
-            </div> */}
 
         </div>
     )
