@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Styles/Contactanos.css';
 import swal from 'sweetalert';
-import { useState } from 'react/cjs/react.development';
 
 export default function Contactanos() {
 
