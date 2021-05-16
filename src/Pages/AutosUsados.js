@@ -64,7 +64,7 @@ const AutosUsados = () => {
     else{
         return(
             <div>
-                <Link to="Autos_0Km"onClick={()=>setMostrar_lista(true)}><div className="boton-atras">Atras</div></Link>
+                <Link to="Autos_0Km" onClick={()=>setMostrar_lista(true)}><div className="boton-atras">Atras</div></Link>
                 <Auto_elegido value={auto_elegido}/>
             </div>
         )

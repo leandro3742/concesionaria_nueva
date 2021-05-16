@@ -28,7 +28,7 @@ const Nav = styled.nav`
 
 const Navbar = () => {
   return (
-    <Nav>  
+    <Nav id="nav">  
       <Link to="/"><img src={logo} alt="" className="logo"/></Link>
       <Burger />
     </Nav>

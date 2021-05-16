@@ -2,9 +2,8 @@
     object-fit: cover;
 }
 .container-grande{
-    width: 100%;
     display: grid;
-    grid-template-columns: 5px 100% 5px;
+    grid-template-columns: 5% 90% 5%;
 }
 .imagen-grande{
     border: outset;
