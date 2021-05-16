@@ -13,15 +13,15 @@ export default class Footer extends React.Component {
             <div className="redes">
                 <div className="facebook">
                     <img className="logo-fb" src={facebook} alt=""/>
-                    <span className="nombre-facebook">LM designer</span>
+                    <span className="nombre-facebook">LM concesionaria</span>
                 </div>
                 <div className="twitter">
                     <img className="logo-tw" src={twitter} alt=""/>
-                    <span className="nombre-twitter">LM designer</span>
+                    <span className="nombre-twitter">LM concesionaria</span>
                 </div>
                 <div className="instagram">
                     <img className="logo-insta" src={instagram} alt=""/>
-                    <span className="nombre-instagram">Lm.designer</span>
+                    <span className="nombre-instagram">Lm.concesionaria</span>
                 </div>
             </div>
             
