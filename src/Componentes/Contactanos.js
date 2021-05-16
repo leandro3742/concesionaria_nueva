@@ -4,7 +4,7 @@ import './Styles/Contactanos.css';
 import swal from 'sweetalert';
 import { useState } from 'react/cjs/react.development';
 
-export default function ContactUs() {
+export default function Contactanos() {
 
   function sendEmail(e) {
     e.preventDefault();
@@ -43,38 +43,37 @@ export default function ContactUs() {
 
   }
   return (
-    // <div>
       <form className="formulario" onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />
-        <h3 className="pasos_a_seguir">1. Ingrese sus datos</h3>
-        <div className="container-form nombre">
+        
+        <h3 style={{ fontSize: "21px" }} >1. Ingrese sus datos</h3>
+        <div>  
           <label className="etiquetas primera">Nombre</label>
-          <input className="input" type="text" name="nombre_cliente" />
+          <input className="form-control" type="text" placeholder="Nombre" name="nombre_cliente" readonly></input>
         </div>
         
-        <div className="container-form nombre">
+        <div className="mt-3">
           <label className="etiquetas primera">Apellido</label>
-          <input className="input" type="text" name="nombre_cliente" />
+          <input className="form-control" type="text" placeholder="Apellido" name="apellido_cliente" readonly></input>
         </div>
 
-        <div className="container-form numero">
+        <div className="mt-3"> 
           <label className="etiquetas">Numero de contacto</label>
-          <input className="input" type="number" name="numero_cliente" />
+          <input className="form-control" type="text" placeholder="09. ... ..." name="numero_cliente" readonly></input>
         </div>
         
-        <h3 className="pasos_a_seguir">2. Elija una de las opciones</h3>
-        <div className="elegir_si_vender_o_comprar">
-          <h4 className={comprar} onClick={()=> elegir("comprar")}>Quiero comprar</h4>
-          <h4 className={vender} onClick={()=> elegir("vender")}>Quiero vender</h4>
+        <h3 style={{ fontSize: "21px" }} className="mt-4">2. Elija una de las opciones</h3>
+        <div className="d-flex justify-content-center">
+          <h4 style={{ fontSize: "15px" }} className={comprar} onClick={()=> elegir("comprar")}>Quiero comprar</h4>
+          <h4 style={{ fontSize: "15px" }} className={vender} onClick={()=> elegir("vender")}>Quiero vender</h4>
         </div>
         
-        <h3 className="pasos_a_seguir">3. Si desea ingrese una pregunta </h3>
+        <h3 style={{ fontSize: "21px" }} className="mt-4">3. Si desea ingrese una pregunta </h3>
         <div className="container-form descripcion">
-          <textarea className="descripcion" type="text" name="mensaje"  />
+          <textarea className="form-control" type="text" name="mensaje"/>
         </div>
         
         <input className="submit" type="submit" value="Enviar consulta" />
       </form>
-    // </div>
   );
 }

@@ -10,10 +10,6 @@ export default class Home extends React.Component {
                 <Link to="/Autos_0Km"  className="submenu uno"><span className="texto">Autos 0Km</span></Link>
                 <Link to="/Autos_usados" className="submenu dos"><span className="texto">Autos usados</span></Link>
                 <Link to="/Contactanos" className="submenu tres"><span className="texto">Contactanos</span></Link>
-
-                <div className="mapa">
-                    <span className="mapa-titulo">Donde nos puedes encontrar?</span>
-                </div>
             </div>
         );
     }

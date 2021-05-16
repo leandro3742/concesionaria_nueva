@@ -12,7 +12,7 @@ function Layout(props) {
       <NavBar />
       {props.children}
       <a href="https://api.whatsapp.com/send?phone=59898361013" className="wpp">
-        <img className="logo_wpp" src={logo_wpp} style={{position: 'fixed', top: '82%', right: 0}}  alt=""/> {/* Hace que aparezca el logo de wpp de forma fija*/}
+        <img className="logo_wpp" src={logo_wpp} style={{position: 'fixed', top: '90%', right: 0, width: "50px"}}  alt=""/> {/* Hace que aparezca el logo de wpp de forma fija*/}
       </a>
       <Footer />
     </div>
